@@ -1,6 +1,10 @@
 class PortfoliosController < ApplicationController
-  def index
-    @portfolio_items = Portfolio.all
+  def index                          # Gets Portfolio items
+    @portfolio_items = Portfolio.all # Can specify what to display on page
+  end
+  # Demonstration Purposes
+  def angular
+    @angular_portfolio_items = Portfolio.angular
   end
 
   def new
@@ -33,18 +37,18 @@ class PortfoliosController < ApplicationController
       end
     end
   end
-  
+
   def show
     @portfolio_item = Portfolio.find(params[:id])
   end
-  
+
   def destroy
     # Preform the lookup
     @portfolio_item = Portfolio.find(params[:id])
-    
+
     # Destroy/delete the record
     @portfolio_item.destroy
-    
+
     # Redirect
     @portfolio_item.destroy
     respond_to do |format|
