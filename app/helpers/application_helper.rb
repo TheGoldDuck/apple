@@ -10,4 +10,11 @@ module ApplicationHelper
       # This is the solution to returning more than one thing.
     end
   end
+
+  def source_helper(layout_name)
+    if session[:source]
+      greeting = "Thanks for visiting me from #{session[:source]}! You are on the #{layout_name} layout."
+      content_tag(:p, greeting, class: "source-greeting")
+    end
+  end
 end
