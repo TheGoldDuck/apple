@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
   layout 'portfolio'
-  
+
   def index                          # Gets Portfolio items
     @portfolio_items = Portfolio.all # Can specify what to display on page
   end
@@ -59,15 +59,15 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
     end
   end
-  
+
   private
-  
+
   def portfolio_params
-    params.require(:portfolio).permit(:title, 
-                                      :subtitle, 
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
                                       :body,
                                       :image,
                                       technologies_attributes: [:name])
   end
-  
+
 end
