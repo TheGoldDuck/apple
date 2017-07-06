@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  layout 'portfolio'
+  
   def index                          # Gets Portfolio items
     @portfolio_items = Portfolio.all # Can specify what to display on page
   end
