@@ -5,7 +5,9 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.special_blogs
+    ###
+    ##
     @page_title = "My Portfolio Blog"
   end
 
@@ -85,3 +87,24 @@ class BlogsController < ApplicationController
       params.require(:blog).permit(:title, :body)
     end
 end
+
+###
+    # Bug demo: (MAY NOT WORK EVERY TIME!) 2 of 20 blogs showing, not good
+    # @blogs = Blog.limit(2)
+    # puts @blogs.inspect
+
+    # Displays information, on said bug, in the console.
+
+    # Can put: 'puts "*" * 500' brfore and after line 12
+    # to isolate the desired information.
+
+##
+    # byebug
+
+    # byebug isolates what stage the bug appears
+
+    # Can look through your application while it
+    # is suspeneded until 'byebug' isn't called.
+
+    # Have a plan to place byebug, don't place in
+    # random places!
