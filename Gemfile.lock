@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/FrostedVoid/sorensen_view_tool
+  revision: 704fad21d1b524b69a27b75b4880319d06cc610c
+  specs:
+    sorensen_view_tool (0.1.0)
+
+GIT
   remote: https://github.com/twbs/bootstrap-rubygem
   revision: b156edfee2b9629ad4751ee2a118a04f824ef9eb
   specs:
@@ -203,6 +209,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.3)
   sass-rails (~> 5.0)
+  sorensen_view_tool!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
