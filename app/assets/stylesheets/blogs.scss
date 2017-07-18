@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
-
-@import "bootstrap";
+@import "font-awesome";
 
 /*
  * Globals
@@ -239,4 +238,12 @@ h6, .h6 {
 .topic-index > .card {
   margin: 10px;
   padding: 20px;
+}
+
+/*
+ * Custom styles
+ */
+
+.social-links li a{
+  font-size: 1em;
 }
